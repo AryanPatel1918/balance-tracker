@@ -1,0 +1,253 @@
+/* RESET STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    font: inherit;
+    border: none;
+}
+
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* KEYFRAMES */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* BASE STYLES */
+
+body {
+    background-color: rgb(181, 233, 254);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    height: 490px;
+}
+
+.app {
+    background-color: white;
+    width: 400px;
+    height: 490px;
+    border-radius: 8px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+    overflow: hidden; /* hides overlapping background that makes top corners pointy */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 35px;
+}
+
+.top {
+    background-color: #f2f2f2;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.balance-number {
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+.overview {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.section {
+    flex: 1;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section:nth-child(2) {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.second-heading {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.income {
+    color: rgb(22, 212, 22);
+}
+
+.expenses {
+    color: red;
+}
+
+.form {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: auto;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 15px 25px;
+    cursor: pointer;
+    background-color: #0072e4;
+    width: 100%;
+    border-radius: 50px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: hsl(210, 100%, 40%);
+}
+
+.transactions-section {
+    margin-left: 30px;
+    width: 250px;
+}
+
+.third-heading {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.transaction {
+    background-color: white;
+    padding: 15px 20px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    animation: fade-in 2s;
+}
+
+.transaction--income {
+    border-right: 5px solid rgb(22, 212, 22);
+}
+
+.transaction--expense {
+    border-right: 5px solid red;
+}
+
+.transaction__amount {
+
+}
+
+.transaction__btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -50%); /* button is initially at the top of the transaction so it seems hidden */
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: all 0.5s;
+}
+
+.transaction:hover .transaction__btn {
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 750px) {
+    .wrapper {
+        flex-direction: column;
+        height: initial; /* sets heights to default height */
+        row-gap: 30px;
+        margin: 50px 0;
+    }
+
+    .app {
+        height: 490px;
+    }
+
+    .transactions-section {
+        margin-left: 0; 
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper {
+        width: 100%;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    .app {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .transactions-section {
+        width: 90%;
+    }
+
+    .third-heading {
+        text-align: center;
+        font-size: 1rem;
+    }
+}

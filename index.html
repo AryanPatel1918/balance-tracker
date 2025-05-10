@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="app">
+            <div class="top">
+                <h1 class="first-heading">Your Balance</h1>
+                <span class="balance-number">4700</span>
+            </div>
+
+            <div class="overview">
+                <section class="section">
+                    <h2 class="second-heading income">Income</h2>
+                    <span class="number number--income">5000</span>
+                </section>
+                <section class="section">
+                    <h2 class="second-heading expenses">Expenses</h2>
+                    <span class="number number--expenses">-300</span>
+                </section>
+            </div>
+
+            <form class="form">
+                <label class="label" for="description">Description</label>
+                <input id="description" type="text" class="input input--description">
+
+                <label class="label" for="amount">Amount (+ for income or - for expense)</label>
+                <input id="amount" type="number" class="input input--amount">
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+
+        <section class="transactions-section">
+            <h3 class="third-heading">Transactions</h3>
+            <ul class="transactions">
+                <li class="transaction transaction--income">
+                    <span class="transaction__text">Salary</span>
+                    <span class="transaction__amount">+5000</span>
+                    <button class="transaction__btn">X</button>
+                </li>
+                <li class="transaction transaction--expense">
+                    <span class="transaction__text">Groceries</span>
+                    <span class="transaction__amount">-300</span>
+                    <button class="transaction__btn">X</button>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
