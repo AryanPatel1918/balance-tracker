@@ -141,7 +141,7 @@ body {
     margin-bottom: 10px;
 }
 
-.btn {
+.submit-btn {
     padding: 15px 25px;
     cursor: pointer;
     background-color: #0072e4;
@@ -181,7 +181,7 @@ body {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    animation: fade-in 2s;
+    animation: fade-in 1s;
 }
 
 .transaction--income {
@@ -190,10 +190,6 @@ body {
 
 .transaction--expense {
     border-right: 5px solid red;
-}
-
-.transaction__amount {
-
 }
 
 .transaction__btn {
