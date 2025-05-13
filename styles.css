@@ -64,7 +64,8 @@ body {
 }
 
 .top {
-    background-color: #f2f2f2;
+    background-color: #000000;
+    color: white;
     height: 100px;
     display: flex;
     flex-direction: column;

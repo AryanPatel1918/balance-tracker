@@ -48,9 +48,11 @@ function handleSubmit(event) {
 }
 
 function handleClick(event) {
-    // remove transaction item
-    const clickedEl = event.target.parentNode; // get parent node (<li>)
-    clickedEl.remove();
+    // only proceed if the clicked element is the delete button
+    if (!event.target.classList.contains("transaction__btn")) return;
+
+    const clickedEl = event.target.closest("li.transaction"); // safely get the closest <li>
+    if (!clickedEl) return;
 
     // update income or expenses overview
     const amountEl = clickedEl.querySelector(".transaction__amount"); // get amount from child element
@@ -66,6 +68,7 @@ function handleClick(event) {
         numberExpensesEl.textContent = updatedExpenses.toFixed(2);
     }
     
+    clickedEl.remove(); // remove the clicked transaction node <li>
     updateBalance(); // update balance
 }
 
