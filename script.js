@@ -81,5 +81,5 @@ function updateBalance() {
     balanceNumberEl.textContent = balance < 0 ? `-$${(balance * -1).toFixed(2)}` : `$${balance.toFixed(2)}`;
 
     // change text color to red if balance < 0, otherwise black
-    balanceNumberEl.style.color = balance < 0 ? 'red' : 'black';
+    balanceNumberEl.style.color = balance < 0 ? 'red' : 'white';
 }
