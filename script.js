@@ -19,7 +19,7 @@ function handleSubmit(event) {
     // create transaction item html
     const transactionItemHTML = `
                                     <li class="transaction transaction--${amount > 0 ? 'income' : 'expense'}">
-                                        <span>${description}</span>
+                                        <span class="transaction__description">${description}</span>
                                         <span class="transaction__amount">${amount > 0 ? '+' : ''}${amount.toFixed(2)}</span>
                                         <button class="transaction__btn">X</button>
                                     </li>

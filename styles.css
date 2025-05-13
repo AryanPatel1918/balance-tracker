@@ -160,7 +160,7 @@ body {
 
 .transactions-section {
     margin-left: 30px;
-    width: 250px;
+    width: 300px;
 }
 
 .third-heading {
@@ -183,6 +183,10 @@ body {
     display: flex;
     justify-content: space-between;
     animation: fade-in 1s;
+}
+
+.transaction__description {
+    word-break: break-all;
 }
 
 .transaction--income {
